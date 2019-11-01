@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap");
 /* ---------------------------------
  *       Override CSS Framework
  * --------------------------------- */
@@ -6,13 +8,14 @@ html {
 }
 body {
   background-color: #f7f7f7;
+  line-height: 2;
 }
 body,
 button,
 input,
 select,
 textarea {
-  font-family: "Ubuntu", "Roboto", "Open Sans", "Microsoft YaHei", sans-serif;
+  font-family: "Noto Sans TC", "Ubuntu", "Roboto", "Open Sans", "Microsoft YaHei", sans-serif;
 }
 @media screen and (min-width: 1280px) {
   .is-1-column .container,
@@ -20,8 +23,16 @@ textarea {
     max-width: 960px;
     width: 960px;
   }
+  .is-3-column .container {
+    max-width: 1216px;
+    width: 1216px;
+  }
 }
 @media screen and (min-width: 1472px) {
+  .is-3-column .container {
+    max-width: 1344px;
+    width: 1344px;
+  }
   .is-2-column .container {
     max-width: 1152px;
     width: 1152px;
@@ -280,7 +291,7 @@ img.thumbnail {
   border: none;
 }
 .is-size-7 {
-  font-size: 0.85rem !important;
+  font-size: 1rem !important;
 }
 .is-7by1 {
   padding-top: 42.8%;
@@ -520,4 +531,87 @@ figure.highlight .section {
 }
 .gist .file {
   all: initial;
+}
+/* ---------------------------------
+ *        自行設定
+ * --------------------------------- */
+h3.menu-label {
+  font-size: 1.25em;
+  color: #e79944;
+  font-weight: bold;
+}
+.tag:not(body) {
+  font-size: 1rem;
+}
+.button.is-light {
+  background-color: #e79944;
+  color: #fff;
+}
+.button.is-light:hover {
+  background-color: #e6851c;
+  color: #fff;
+}
+a {
+  color: #e79944;
+}
+a:hover {
+  color: #e6851c;
+}
+.content h2:not(:first-child) {
+  margin-top: 2.5em;
+}
+.navbar-main {
+  box-shadow: none;
+  background-color: #e79944;
+  color: #fff;
+}
+.navbar-item {
+  color: #fff;
+}
+.card {
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1), 0 2px 4px 0 rgba(0,0,0,0.1);
+}
+.card:hover {
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1), 0 4px 8px 0 rgba(0,0,0,0.1), 0 8px 16px 0 rgba(0,0,0,0.1), 0 16px 32px 0 rgba(0,0,0,0.1);
+}
+.card.widget:hover {
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1), 0 2px 4px 0 rgba(0,0,0,0.1);
+}
+.menu-list a:hover {
+  background-color: #ffe3c4;
+}
+.menu-list a {
+  transition: all 0.5s;
+}
+.tags.has-addons .tag {
+  background-color: #ffe3c4;
+  transition: all 0.5s;
+}
+.tags.has-addons .tag:hover {
+  background-color: #ffce97;
+}
+.tags.has-addons .tag.is-grey {
+  background-color: #e7e7e7;
+}
+.tag:not(body).is-link {
+  background-color: #e79944;
+}
+.has-link-grey:hover,
+.has-link-black-ter:hover {
+  color: #e79944 !important;
+}
+.navbar-logo {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1.5rem;
+}
+.footer-logo {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1.25rem;
+}
+.navbar-main .navbar-item.is-active {
+  color: #251812;
+}
+a.navbar-item:hover {
+  background-color: #e79944;
+  color: #251812;
 }
