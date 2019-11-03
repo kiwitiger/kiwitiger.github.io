@@ -20,26 +20,26 @@ textarea {
 @media screen and (min-width: 1280px) {
   .is-1-column .container,
   .is-2-column .container {
-    max-width: 960px;
-    width: 960px;
+    max-width: 1056px;
+    width: 1056px;
   }
   .is-3-column .container {
-    max-width: 1216px;
-    width: 1216px;
+    max-width: 1264px;
+    width: 1264px;
   }
 }
 @media screen and (min-width: 1472px) {
   .is-3-column .container {
-    max-width: 1344px;
-    width: 1344px;
+    max-width: 1440px;
+    width: 1440px;
   }
   .is-2-column .container {
-    max-width: 1152px;
-    width: 1152px;
+    max-width: 1248px;
+    width: 1248px;
   }
   .is-1-column .container {
-    max-width: 960px;
-    width: 960px;
+    max-width: 1056px;
+    width: 1056px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -562,7 +562,7 @@ a:hover {
 }
 .navbar-main {
   box-shadow: none;
-  background-color: #e79944;
+  background: linear-gradient(100deg, #e79944 72%, transparent 27%), linear-gradient(135deg, #251812 72%, transparent 28%), linear-gradient(135deg, #e79944 76%, transparent 24%), linear-gradient(100deg, #251812 79%, transparent 21%), linear-gradient(135deg, #e79944 76%, transparent 24%), linear-gradient(100deg, #251812 79%, transparent 21%), linear-gradient(100deg, #e79944 82%, transparent 18%), linear-gradient(135deg, #251812 82%, transparent 18%), linear-gradient(90deg, #e79944 90%, transparent 10%), linear-gradient(90deg, #251812 100%, transparent 0%);
   color: #fff;
 }
 .navbar-item {
@@ -614,4 +614,11 @@ a:hover {
 a.navbar-item:hover {
   background-color: #e79944;
   color: #251812;
+}
+.navbar-end a.navbar-item {
+  z-index: 40;
+}
+.navbar-end a.navbar-item:hover {
+  background-color: transparent;
+  color: #e79944;
 }
