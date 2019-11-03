@@ -582,6 +582,7 @@ a:hover {
   border-radius: 0px;
 }
 .menu-list a:hover {
+  background-color: #e7e7e7 !important;
   color: #ed5725;
 }
 .menu-list a {
@@ -652,4 +653,11 @@ a.navbar-item:hover {
 .ins-section .ins-search-item:hover,
 .ins-section .ins-search-item.active {
   background: #ed5725 !important;
+}
+.menu-list a.active {
+  color: #ed5725;
+  background: transparent;
+}
+.footer {
+  padding-bottom: 3rem;
 }

@@ -93,4 +93,28 @@
         $mask.on('click', toggleToc);
         $('.navbar-main .catalogue').on('click', toggleToc);
     }
+    // 自行增加
+    $(window).on('scroll', function() {
+        let tocElement = document.querySelectorAll('#toc .menu-list a');
+        console.log(tocElement);
+        let tocTarget = [];
+        tocElement.forEach(element => {
+            tocTarget.push($(element).attr('href'));
+        })
+        console.log(tocTarget);
+        tocTarget.forEach(element => {
+            if ($(element).offset().top < $(window).scrollTop() + 50) {
+                $(`.menu-list a[href="${element}"]`).addClass('active');
+            } else {
+                $(`.menu-list a[href="${element}"]`).removeClass('active');
+            }
+        })
+    })
+    $('#toc .menu-list a').on('click', function(e) {
+        e.preventDefault();
+        let target = $($(this).attr('href')).offset().top - 50;
+        $('html, body').animate({
+            scrollTop: target
+        }, 500);
+    })
 })(jQuery);
