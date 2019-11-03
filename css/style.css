@@ -17,29 +17,18 @@ select,
 textarea {
   font-family: "Noto Sans TC", "Ubuntu", "Roboto", "Open Sans", "Microsoft YaHei", sans-serif;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .is-1-column .container,
   .is-2-column .container {
-    max-width: 1056px;
-    width: 1056px;
-  }
-  .is-3-column .container {
-    max-width: 1264px;
-    width: 1264px;
+    max-width: 992px;
+    width: 992px;
   }
 }
-@media screen and (min-width: 1472px) {
-  .is-3-column .container {
-    max-width: 1440px;
-    width: 1440px;
-  }
+@media screen and (min-width: 1200px) {
+  .is-1-column .container,
   .is-2-column .container {
-    max-width: 1248px;
-    width: 1248px;
-  }
-  .is-1-column .container {
-    max-width: 1056px;
-    width: 1056px;
+    max-width: 1136px;
+    width: 1136px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -123,7 +112,7 @@ img.thumbnail {
   color: #3273dc;
   background-color: transparent;
 }
-@media screen and (max-width: 1087px) {
+@media screen and (max-width: 768px) {
   .navbar-main .navbar-menu {
     justify-content: center;
     box-shadow: none;
@@ -562,7 +551,7 @@ a:hover {
 }
 .navbar-main {
   box-shadow: none;
-  background: linear-gradient(100deg, #e79944 72%, transparent 27%), linear-gradient(135deg, #251812 72%, transparent 28%), linear-gradient(135deg, #e79944 76%, transparent 24%), linear-gradient(100deg, #251812 79%, transparent 21%), linear-gradient(135deg, #e79944 76%, transparent 24%), linear-gradient(100deg, #251812 79%, transparent 21%), linear-gradient(100deg, #e79944 82%, transparent 18%), linear-gradient(135deg, #251812 82%, transparent 18%), linear-gradient(90deg, #e79944 90%, transparent 10%), linear-gradient(90deg, #251812 100%, transparent 0%);
+  background: linear-gradient(90deg, #e79944 90%, transparent 10%), linear-gradient(90deg, #251812 100%, transparent 0%);
   color: #fff;
 }
 .navbar-item {
@@ -603,6 +592,7 @@ a:hover {
 .navbar-logo {
   font-family: 'Permanent Marker', cursive;
   font-size: 1.5rem;
+  color: #251812;
 }
 .footer-logo {
   font-family: 'Permanent Marker', cursive;
@@ -610,15 +600,63 @@ a:hover {
 }
 .navbar-main .navbar-item.is-active {
   color: #251812;
+  position: relative;
+}
+.navbar-main .navbar-item.is-active:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 8px 8px 8px;
+  border-color: transparent transparent #251812 transparent;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
 }
 a.navbar-item:hover {
   background-color: #e79944;
   color: #251812;
 }
 .navbar-end a.navbar-item {
-  z-index: 40;
+  z-index: 99;
 }
 .navbar-end a.navbar-item:hover {
   background-color: transparent;
   color: #e79944;
+}
+.stripe {
+  position: relative;
+}
+.stripe1 {
+  right: 25%;
+  z-index: 100;
+}
+.stripe2 {
+  right: 21%;
+  transform: scale(1.2);
+  z-index: 99;
+}
+.stripe3 {
+  right: 15%;
+}
+.stripe-brown {
+  position: absolute;
+  border-radius: 50%;
+  width: 40px;
+  height: 60px;
+  background-color: #251812;
+  top: -10px;
+  left: 20px;
+}
+.stripe-orange {
+  position: absolute;
+  border-radius: 50%;
+  width: 40px;
+  height: 60px;
+  background-color: #e79944;
+  top: -6px;
+  left: 10px;
+  transform: rotate(-15deg);
 }
