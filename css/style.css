@@ -9,6 +9,7 @@ html {
 body {
   background-color: #ddd;
   line-height: 2;
+  text-align: justify;
 }
 body,
 button,
@@ -532,35 +533,9 @@ figure.highlight .section {
   all: initial;
 }
 /* ---------------------------------
- *        自行設定
+ *        customize
  * --------------------------------- */
-h3.menu-label {
-  font-size: 1rem;
-  color: #ed5725;
-  padding-left: 0.5rem;
-  border-left: 5px solid #ed5725;
-  line-height: 1.25;
-}
-.tag:not(body) {
-  font-size: 1rem;
-}
-.button.is-light {
-  background-color: #ddd;
-  transition: all 0.5s;
-}
-.button.is-light:hover {
-  background-color: #ed5725;
-  color: #fff;
-}
-a {
-  color: #ed5725;
-}
-a:hover {
-  color: #e6851c;
-}
-.content h2:not(:first-child) {
-  margin-top: 2.5em;
-}
+/* navbar */
 .navbar-main {
   box-shadow: 2px 4px 5px rgba(3,3,3,0.2);
   background: #090a0c;
@@ -569,52 +544,13 @@ a:hover {
 .navbar-item {
   color: #fff;
 }
-@media screen and (max-width: 1087px) {
-  .navbar-item {
-    color: #090a0c;
-  }
-}
-.card {
-  box-shadow: none;
-  border-radius: 0px;
-}
-.card .card-image {
-  border-radius: 0px;
-}
-.menu-list a:hover {
-  background-color: #e7e7e7 !important;
-  color: #ed5725;
-}
-.menu-list a {
-  transition: all 0.5s;
-}
-.tags.has-addons .tag {
-  transition: all 0.5s;
-}
-.tags.has-addons .tag:hover {
-  color: #ed5725;
-}
-.tags.has-addons .tag.is-grey {
-  background-color: #e7e7e7;
-}
-.tag:not(body).is-link {
-  background-color: #ed5725;
-}
-.has-link-grey:hover,
-.has-link-black-ter:hover {
-  color: #ed5725 !important;
-}
 .navbar-logo {
   font-family: 'Permanent Marker', cursive;
   font-size: 1.5rem;
-  color: #ed5725;
-}
-.footer-logo {
-  font-family: 'Permanent Marker', cursive;
-  font-size: 1.25rem;
+  color: #e79944;
 }
 .navbar-main .navbar-item.is-active {
-  color: #ed5725;
+  color: #e79944;
   position: relative;
 }
 .navbar-main .navbar-item.is-active:after {
@@ -624,7 +560,7 @@ a:hover {
   height: 0;
   border-style: solid;
   border-width: 0 8px 8px 8px;
-  border-color: transparent transparent #ed5725 transparent;
+  border-color: transparent transparent #e79944 transparent;
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -632,12 +568,20 @@ a:hover {
 }
 a.navbar-item:hover {
   background-color: #090a0c;
-  color: #ed5725;
+  color: #e79944;
 }
 @media screen and (max-width: 1087px) {
   a.navbar-item:hover {
     background-color: transparent;
-    color: #090a0c;
+    color: #e79944;
+  }
+}
+.navbar-brand a.navbar-item:hover {
+  color: #fff;
+}
+@media screen and (max-width: 1087px) {
+  .navbar-menu {
+    background-color: #090a0c;
   }
 }
 .navbar-end a.navbar-item {
@@ -645,19 +589,86 @@ a.navbar-item:hover {
 }
 .navbar-end a.navbar-item:hover {
   background-color: transparent;
-  color: #ed5725;
+  color: #e79944;
+}
+/* tag */
+.tag:not(body) {
+  font-size: 1rem;
+}
+/* button */
+.button.is-light {
+  background-color: #ddd;
+  transition: all 0.5s;
+}
+.button.is-light:hover {
+  background-color: #e79944;
+  color: #fff;
+}
+/* <a> */
+a {
+  color: #e6851c;
+}
+/* title */
+.content h2:not(:first-child) {
+  margin-top: 2.5em;
+}
+/* menu */
+h3.menu-label {
+  font-size: 1rem;
+  color: #e79944;
+  padding-left: 0.5rem;
+  border-left: 5px solid #e79944;
+  line-height: 1.25;
+}
+.menu-list a {
+  transition: all 0.5s;
+}
+.menu-list a.active {
+  color: #e79944;
+  background: transparent;
+}
+.menu-list a:hover {
+  background-color: #e7e7e7 !important;
+  color: #e79944;
+}
+/* card */
+.card {
+  box-shadow: none;
+  border-radius: 0px;
+}
+.card .card-image {
+  border-radius: 0px;
+}
+/* tags */
+.tags.has-addons .tag {
+  transition: all 0.5s;
+}
+.tags.has-addons .tag:hover {
+  color: #e79944;
+}
+.tags.has-addons .tag.is-grey {
+  background-color: #e7e7e7;
+}
+.tag:not(body).is-link {
+  background-color: #e79944;
+}
+/* footer */
+.footer-logo {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1.25rem;
 }
 .footer p {
   color: #aaa;
 }
-.ins-section .ins-search-item:hover,
-.ins-section .ins-search-item.active {
-  background: #ed5725 !important;
-}
-.menu-list a.active {
-  color: #ed5725;
-  background: transparent;
-}
 .footer {
   padding-bottom: 3rem;
+}
+/* others */
+.ins-section .ins-search-item:hover,
+.ins-section .ins-search-item.active {
+  background: #e79944 !important;
+}
+.has-link-grey:hover,
+.has-link-black-ter:hover {
+  color: #e79944 !important;
 }
